@@ -3,7 +3,8 @@ TODO
 1. To CPAN
 2. Doc
 3. Tests.
-4.
+4. Remove 'mode_id'. 'id' is required.
+5.
 
 Applied
 =======
