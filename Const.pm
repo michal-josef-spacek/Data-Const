@@ -15,9 +15,6 @@ sub new {
 	# Create object.
 	my $self = bless {}, $class;
 
-	# Mode to present ids.
-	$self->{'mode_id'} = 1;
-
 	# Process parameters.
 	set_params($self, @params);
 

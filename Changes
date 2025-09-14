@@ -1,4 +1,5 @@
 0.02
+ - Remove 'mode_id' parameters, 'id' is required.
 
 0.01 2025-04-27T17:45:51+02:00
  - First version.

@@ -3,9 +3,10 @@ TODO
 1. To CPAN
 2. Doc
 3. Tests.
-4. Remove 'mode_id'. 'id' is required.
 5. Add 'output_struct' ?
 6.
 
 Applied
 =======
+4. Remove 'mode_id'. 'id' is required.
+OK [20250914] skim
