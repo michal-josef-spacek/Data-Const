@@ -19,5 +19,6 @@ README
 SIGNATURE
 t/Data-Const/01-use.t
 t/Data-Const/02-version.t
+t/Data-Const/03-new.t
 xt/Data-Const/01-pod_coverage.t
 xt/Data-Const/02-pod.t

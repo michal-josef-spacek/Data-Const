@@ -3,6 +3,8 @@ abstract: 'Constant data abstract class.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
+  English: 0
+  Error::Pure::Utils: 0
   ExtUtils::MakeMaker: 6.59
   Test::More: 0
   Test::NoWarnings: 0
@@ -24,6 +26,7 @@ no_index:
 requires:
   Class::Utils: 0.03
   Error::Pure: 0
+  Mo::utils::Hash: 0
   perl: 5.6.2
 resources:
   bugtracker: https://github.com/michal-josef-spacek/Data-Const/issues
