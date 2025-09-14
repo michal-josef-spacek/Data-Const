@@ -1,4 +1,6 @@
 0.02
+ - Add add_object_to_output_array() method as helper for adding of object
+   to output structure.
  - Add 'output_struct' parameter for storing of output data.
  - Remove 'mode_id' parameters, 'id' is required.
 

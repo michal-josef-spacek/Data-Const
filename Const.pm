@@ -34,6 +34,22 @@ sub data {
 	err "Need to be implemented.";
 }
 
+sub add_object_to_output_array {
+	my ($self, $key, $object) = @_;
+
+	if (exists $self->{'output_struct'}->{$key}) {
+		if (ref $self->{'output_struct'}->{$key} ne 'ARRAY') {
+			err "Bad output structure defined in constructor.";
+		} else {
+			push @{$self->{'output_struct'}->{$key}}, $object;
+		}
+	} else {
+		$self->{'output_struct'}->{$key} = [$object];
+	}
+
+	return;
+}
+
 1;
 
 __END__
