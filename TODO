@@ -3,7 +3,6 @@ TODO
 1. To CPAN
 2. Doc
 3. Tests.
-6. Two abstract classes, one for dataset, second one for set?
 7.
 
 Applied
@@ -12,4 +11,7 @@ Applied
 OK [20250914] skim
 
 5. Add 'output_struct' ?
+OK [20250914] skim
+
+6. Two abstract classes, one for dataset, second one for set?
 OK [20250914] skim
