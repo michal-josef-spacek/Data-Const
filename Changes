@@ -1,4 +1,5 @@
 0.02
+ - Add Data::Const::Set for set abstract class.
  - Add add_object_to_output_array() method as helper for adding of object
    to output structure.
  - Add 'output_struct' parameter for storing of output data.

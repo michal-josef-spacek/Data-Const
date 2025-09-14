@@ -1,5 +1,6 @@
 Changes
 Const.pm
+Const/Set.pm
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
@@ -17,8 +18,12 @@ MANIFEST			This list of files
 META.yml
 README
 SIGNATURE
+t/Data-Const-Set/01-use.t
+t/Data-Const-Set/02-version.t
 t/Data-Const/01-use.t
 t/Data-Const/02-version.t
 t/Data-Const/03-new.t
+xt/Data-Const-Set/01-pod_coverage.t
+xt/Data-Const-Set/02-pod.t
 xt/Data-Const/01-pod_coverage.t
 xt/Data-Const/02-pod.t
