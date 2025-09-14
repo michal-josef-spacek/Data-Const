@@ -1,8 +1,6 @@
 0.02
+ - Add 'output_isa' and check for output data.
  - Add Data::Const::Set for set abstract class.
- - Add add_object_to_output_array() method as helper for adding of object
-   to output structure.
- - Add 'output_struct' parameter for storing of output data.
  - Remove 'mode_id' parameters, 'id' is required.
 
 0.01 2025-04-27T17:45:51+02:00

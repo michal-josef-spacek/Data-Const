@@ -26,7 +26,9 @@ no_index:
 requires:
   Class::Utils: 0.03
   Error::Pure: 0
+  Mo::utils: 0.01
   Mo::utils::Hash: 0
+  Scalar::Util: 0
   perl: 5.6.2
 resources:
   bugtracker: https://github.com/michal-josef-spacek/Data-Const/issues

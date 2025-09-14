@@ -5,7 +5,8 @@ use warnings;
 
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
-use Mo::utils::Hash qw(check_hash);
+use Mo::utils 0.01 qw(check_required);
+use Scalar::Util qw(blessed);
 
 our $VERSION = 0.02;
 
@@ -16,14 +17,14 @@ sub new {
 	# Create object.
 	my $self = bless {}, $class;
 
-	# Output structure.
-	$self->{'output_struct'} = {};
+	# Output ISA.
+	$self->{'output_isa'} = undef;
 
 	# Process parameters.
 	set_params($self, @params);
 
-	# Check 'output_struct'.
-	check_hash($self, 'output_struct');
+	# Check 'output_isa';
+	check_required($self, 'output_isa');
 
 	return $self;
 }
@@ -31,23 +32,22 @@ sub new {
 sub data {
 	my $self = shift;
 
-	err "Need to be implemented.";
-}
+	my $obj = $self->_data;
 
-sub add_object_to_output_array {
-	my ($self, $key, $object) = @_;
+	if (! defined $obj
+		|| ! blessed($obj)
+		|| ! $obj->isa($self->{'output_isa'})) {
 
-	if (exists $self->{'output_struct'}->{$key}) {
-		if (ref $self->{'output_struct'}->{$key} ne 'ARRAY') {
-			err "Bad output structure defined in constructor.";
-		} else {
-			push @{$self->{'output_struct'}->{$key}}, $object;
-		}
-	} else {
-		$self->{'output_struct'}->{$key} = [$object];
+		err 'Bad output object.';
 	}
 
-	return;
+	return $obj;
+}
+
+sub _data {
+	my $self = shift;
+
+	err "Need to be implemented.";
 }
 
 1;
