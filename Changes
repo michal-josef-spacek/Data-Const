@@ -1,5 +1,4 @@
 0.02
- - Add 'output_isa' and check for output data.
  - Add Data::Const::Set for set abstract class.
  - Remove 'mode_id' parameters, 'id' is required.
 
