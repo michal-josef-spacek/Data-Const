@@ -28,6 +28,7 @@ requires:
   Error::Pure: 0
   Mo::utils: 0.01
   Mo::utils::Hash: 0
+  Mo::utils::Language: 0
   Scalar::Util: 0
   perl: 5.6.2
 resources:

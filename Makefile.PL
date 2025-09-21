@@ -22,6 +22,7 @@ requires 'Class::Utils' => 0.03;
 requires 'Error::Pure' => 0;
 requires 'Mo::utils' => 0.01;
 requires 'Mo::utils::Hash' => 0;
+requires 'Mo::utils::Language' => 0;
 requires 'Scalar::Util' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-Const/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Data-Const';

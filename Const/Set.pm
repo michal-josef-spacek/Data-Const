@@ -6,6 +6,7 @@ use warnings;
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use Mo::utils::Hash qw(check_hash);
+use Mo::utils::Language qw(check_language_639_2);
 use Scalar::Util qw(blessed);
 
 our $VERSION = 0.02;
@@ -17,11 +18,17 @@ sub new {
 	# Create object.
 	my $self = bless {}, $class;
 
+	# Language.
+	$self->{'lang'} = 'eng';
+
 	# Output structure.
 	$self->{'output_struct'} = {};
 
 	# Process parameters.
 	set_params($self, @params);
+
+	# Check 'lang'.
+	check_language_639_2($self, 'lang');
 
 	# Check 'output_struct'.
 	check_hash($self, 'output_struct');
