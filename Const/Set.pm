@@ -6,6 +6,7 @@ use warnings;
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use Mo::utils::Hash qw(check_hash);
+use Scalar::Util qw(blessed);
 
 our $VERSION = 0.02;
 
@@ -40,11 +41,17 @@ sub add_object_to_output_array {
 	if (exists $self->{'output_struct'}->{$key}) {
 		if (ref $self->{'output_struct'}->{$key} ne 'ARRAY') {
 			err "Bad output structure defined in constructor.";
-		} else {
-			push @{$self->{'output_struct'}->{$key}}, $object;
 		}
 	} else {
-		$self->{'output_struct'}->{$key} = [$object];
+		$self->{'output_struct'}->{$key} = [];
+	}
+
+	if (blessed($object)) {
+		push @{$self->{'output_struct'}->{$key}}, $object;
+	} elsif (ref $object eq 'ARRAY') {
+		push @{$self->{'output_struct'}->{$key}}, @{$object};
+	} else {
+		err 'Bad object.';
 	}
 
 	return;
