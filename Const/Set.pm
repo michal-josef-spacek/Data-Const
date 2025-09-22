@@ -9,7 +9,7 @@ use Mo::utils::Hash qw(check_hash);
 use Mo::utils::Language qw(check_language_639_2);
 use Scalar::Util qw(blessed);
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Constructor.
 sub new {
