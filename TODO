@@ -4,7 +4,8 @@ TODO
 2. Doc
 3. Tests.
 7. Parameter 'lang' to Data::Const?
-8.
+8. Move Data::Const::Set to Data::Set?
+9.
 
 Applied
 =======
