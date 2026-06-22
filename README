@@ -1,0 +1,111 @@
+NAME
+    Data::Const - Abstract class for constant data objects.
+
+SYNOPSIS
+     use Data::Const;
+
+     my $obj = Data::Const->new;
+
+     my $data = $obj->data;
+
+DESCRIPTION
+    This module is an abstract base class for objects which provide constant
+    data. Subclasses are expected to implement the data() method.
+
+METHODS
+  "new"
+     my $obj = Data::Const->new;
+
+    Constructor.
+
+    Returns instance of object.
+
+  "data"
+     my $data = $obj->data;
+
+    Abstract method for returning constant data from subclass
+    implementation.
+
+ERRORS
+     new():
+             From Class::Utils::set_params():
+                     Unknown parameter '%s'.
+
+     data():
+             Need to be implemented.
+
+EXAMPLES
+  EXAMPLE1
+     use strict;
+     use warnings;
+
+     use Data::Const;
+     use English;
+     use Error::Pure::Utils qw(clean);
+
+     my $obj = Data::Const->new;
+
+     eval {
+             $obj->data;
+     };
+     if ($EVAL_ERROR) {
+             print $EVAL_ERROR;
+             clean();
+     }
+
+     # Output:
+     # Need to be implemented.
+
+  EXAMPLE2
+     use strict;
+     use warnings;
+
+     package Foo;
+
+     use parent 'Data::Const';
+
+     sub data {
+             return {
+                     'foo' => 'example data',
+             };
+     }
+
+     package main;
+
+     use Data::Printer;
+
+     my $obj = Foo->new;
+
+     my $data = $obj->data;
+
+     # Dump out.
+     p $data;
+
+     # Output:
+     # {
+     #     foo   "example data"
+     # }
+
+DEPENDENCIES
+    Class::Utils, Error::Pure.
+
+SEE ALSO
+    Data::Const::Set
+        Abstract class for constant data sets built on this base API.
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Data-Const>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2025 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.03
+
