@@ -90,8 +90,8 @@ DEPENDENCIES
     Class::Utils, Error::Pure.
 
 SEE ALSO
-    Data::Const::Set
-        Abstract class for constant data sets built on this base API.
+    Data::Set
+        Abstract class for data sets.
 
 REPOSITORY
     <https://github.com/michal-josef-spacek/Data-Const>

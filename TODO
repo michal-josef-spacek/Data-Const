@@ -3,7 +3,6 @@ TODO
 1. To CPAN
 3. Tests.
 7. Parameter 'lang' to Data::Const?
-8. Move Data::Const::Set to Data::Set?
 9.
 
 Applied
@@ -19,3 +18,7 @@ OK [20250914] skim
 
 2. Doc
 OK [20260622] skim
+
+8. Move Data::Const::Set to Data::Set?
+OK [20260622] skim
+

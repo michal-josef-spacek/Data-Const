@@ -143,9 +143,9 @@ L<Error::Pure>.
 
 =over
 
-=item L<Data::Const::Set>
+=item L<Data::Set>
 
-Abstract class for constant data sets built on this base API.
+Abstract class for data sets.
 
 =back
 
